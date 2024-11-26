@@ -52,8 +52,9 @@ To build Peregrine:
 ```
 $ git clone https://github.com/pdclab/Peregrine.git
 $ cd Peregrine
+$ nix develop
 $ source tbb2020/bin/tbbvars.sh intel64
-$ make -j CC=g++-10
+$ make -j CC=g++
 $ bin/test
 ```
 

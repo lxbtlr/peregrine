@@ -34,6 +34,7 @@
       peregrineNativeBuildInputs = with pkgs; [
         # ChipYard Dependencies
         binutils
+        boost
         cmake
         wget
         git
@@ -70,6 +71,8 @@
         hardeningDisable = ["all"];
 
         shellHook = ''
+          # make sure libtbb2 is sourced
+          source tbb2020/bin/tbbvars.sh intel64
           # Unset $OBJCOPY for compiling glibc-based RISC-V toolchain
           unset OBJCOPY
           unset OBJDUMP
