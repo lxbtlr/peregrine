@@ -47,6 +47,12 @@ sudo apt-get update
 sudo apt install g++-10 libunittest++-dev
 ```
 
+Alternatively, use nix:
+
+```
+nix develop
+```
+
 To build Peregrine:
 
 ```
@@ -57,6 +63,8 @@ $ source tbb2020/bin/tbbvars.sh intel64
 $ make -j CC=g++
 $ bin/test
 ```
+
+
 
 Several sample applications, query patterns, and a sample dataset are released with the code. Calling any of the applications without arguments will show you what they expect:
 
